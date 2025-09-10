@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransBrew International — Эксклюзивный дистрибьютор InBrew в РФ</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Яндекс.Метрика
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(XXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+  </script> -->
+</head>
+
+<body>
+
+    <!-- Меню с прогресс-барами -->
+    <nav class="navbar">
+        <div class="logo">TransBrew</div>
+        <li class="mobile-header" id="mobileHeader">
+            <div><strong id="currentSection">Главная</strong></div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-mobile"></div>
+            </div>
+        </li>
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#stats">Показатели</a>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-stats"></div>
+                </div>
+            </li>
+            <li>
+                <a href="#about">О компании</a>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-about"></div>
+                </div>
+            </li>
+            <li>
+                <a href="#products">Продукция</a>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-products"></div>
+                </div>
+            </li>
+            <li>
+                <a href="#team">Команда</a>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-team"></div>
+                </div>
+            </li>
+            <li>
+                <a href="#contacts">Контакты</a>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-contacts"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <!-- Главная -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>TransBrew International</h1>
+            <p>Эксклюзивный представитель портфеля InBrew Beverages в Российской Федерации</p>
+            <p><em>Исключительные вкусы. Вечная элегантность. Глобальное наследие.</em></p>
+            <div class="cta-buttons">
+                <a href="#products" class="btn">Каталог продукции</a>
+                <a href="catalog.pdf" class="btn btn-outline" download>Скачать PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Показатели -->
+    <section id="stats" class="section">
+        <h2>#1 В мире спиртных напитков по объему в Индии</h2>
+        <div class="stats-grid">
+            <div class="stat"><strong>31</strong> производственная площадка</div>
+            <div class="stat"><strong>46 млн+</strong> ящиков в год</div>
+            <div class="stat"><strong>24 штата</strong> Индии</div>
+            <div class="stat"><strong>7 брендов</strong> >1 млн ящиков</div>
+            <div class="stat"><strong>$1.4 млрд</strong> выручки (FY25E)</div>
+            <div class="stat"><strong>8 млн ящиков</strong> пива (рост ~50%)</div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section id="about" class="section">
+        <h2>О компании</h2>
+        <p>
+            Акционерное общество «ТРАНСБРЮ ИНТЕРНЕЙШНЛ» — эксклюзивный дистрибьютор премиальных брендов
+            <strong>InBrew Beverages</strong> на территории Российской Федерации. Мы объединяем богатое наследие
+            индийского производства и европейские стандарты качества.
+        </p>
+        <div class="video-container">
+            <video controls>
+                <source src="inbrew-story.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </section>
+
+    <!-- Продукция (слайдер) -->
+    <section id="products" class="section">
+        <h2>Премиальный портфель брендов</h2>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <!-- Louis Vernant XO -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/louis-vernant.jpg" alt="Louis Vernant XO">
+                    <div class="product-info">
+                        <h3>Louis Vernant XO</h3>
+                        <div class="product-desc">
+                            <p>Французские коньячные спирты, ручной отбор. Символ вечной элегантности.</p>
+                            <p><strong>ABV:</strong> 40%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diplomat Whisky -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/diplomat.jpg" alt="Diplomat Whisky">
+                    <div class="product-info">
+                        <h3>Diplomat Whisky</h3>
+                        <div class="product-desc">
+                            <p>Смесь индийского солода и шотландского виски. Легенда дипломата.</p>
+                            <p><strong>ABV:</strong> 42.8%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green Label -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/green-label.jpg" alt="Green Label">
+                    <div class="product-info">
+                        <h3>Green Label Barrel Special</h3>
+                        <div class="product-desc">
+                            <p>С 1994 г. Выдержка в дубовых бочках. Бриллиантовая огранка бутылки.</p>
+                            <p><strong>ABV:</strong> 40%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honey Bee Brandy -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/honey-bee.jpg" alt="Honey Bee Brandy">
+                    <div class="product-info">
+                        <h3>Honey Bee Brandy</h3>
+                        <div class="product-desc">
+                            <p>Золотистый бренди с фруктовыми нотами. С 1974 г.</p>
+                            <p><strong>ABV:</strong> 37.5–42.8%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blue Riband Gin -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/blue-riband.jpg" alt="Blue Riband Gin">
+                    <div class="product-info">
+                        <h3>Blue Riband Gin</h3>
+                        <div class="product-desc">
+                            <p>Лауреат Concours Mondial (2005). Классический вкус с можжевельником.</p>
+                            <p><strong>ABV:</strong> 42.8%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- White Mischief Vodka -->
+                <div class="swiper-slide product-slide">
+                    <img src="images/white-mischief.jpg" alt="White Mischief Vodka">
+                    <div class="product-info">
+                        <h3>White Mischief Vodka</h3>
+                        <div class="product-desc">
+                            <p>Матовая бутылка. Молодежный бренд. С 1996 г.</p>
+                            <p><strong>ABV:</strong> 42.8%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <a href="catalog.pdf" class="btn btn-download" download>📥 Скачать каталог (PDF)</a>
+    </section>
+
+    <!-- Команда -->
+    <section id="team" class="section">
+        <h2>Команда и инвесторы</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/ravi-deol.jpg" alt="Ravi S. Deol">
+                <h4>Ravi S. Deol</h4>
+                <p>Основатель и Председатель InBrew</p>
+            </div>
+            <div class="team-member">
+                <img src="images/rajnikant-sabnavis.jpg" alt="Rajnikant Sabnavis">
+                <h4>Rajnikant Sabnavis</h4>
+                <p>Генеральный директор</p>
+            </div>
+            <div class="team-member">
+                <img src="images/nishant-jain.jpg" alt="Nishant Jain">
+                <h4>Nishant Jain</h4>
+                <p>COO (Spirits)</p>
+            </div>
+            <div class="team-member">
+                <img src="images/deepak-malhotra.jpg" alt="Deepak Malhotra">
+                <h4>Deepak Malhotra</h4>
+                <p>CBO (Beer)</p>
+            </div>
+        </div>
+        <p class="investors">Портфель InBrew включает 43 бренда от Diageo India и бизнес Molson Coors в Индии.</p>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <p><strong>Компания:</strong> АО «ТРАНСБРЮ ИНТЕРНЕЙШНЛ»</p>
+            <p><strong>Адрес:</strong> 117485, г. Москва, м.о. Коньково, ул. Обручева, д. 30/1, стр. 2</p>
+            <p><strong>Телефон:</strong> +7 (495) 775-39-38</p>
+            <p><strong>Email:</strong> <a href="mailto:info@transbrew.ru">info@transbrew.ru</a></p>
+            <p><strong>Контактное лицо:</strong> Людмила Нестерова — +7 963 531 3130</p>
+            <p><strong>График работы:</strong> Пн–Пт: 9:00–18:00 | Сб–Вс: выходной</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef" width="100%" height="300"
+                frameborder="0"></iframe>
+        </div>
+        <form class="contact-form">
+            <input type="text" placeholder="Имя" required>
+            <input type="text" placeholder="Компания">
+            <input type="email" placeholder="Email" required>
+            <select>
+                <option>Дистрибуция</option>
+                <option>Оптовые заказы</option>
+                <option>Маркетинг</option>
+            </select>
+            <textarea placeholder="Сообщение"></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

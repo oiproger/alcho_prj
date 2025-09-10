@@ -1,0 +1,362 @@
+:root {
+    --dark: #0D1B1E;
+    --gold: #D4AF37;
+    --light: #F5F5F5;
+    --green: #0A5C36;
+    --gray: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(13, 27, 30, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Прогресс-бар под пунктом */
+.progress-bar {
+    width: 60px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gold);
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gold);
+}
+
+/* Главный экран */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--gold);
+}
+
+.hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.cta-buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    margin: 0 0.5rem;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Секции */
+.section {
+    min-height: 100vh;
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: var(--gold);
+    text-align: center;
+}
+
+/* Показатели */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.stat {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Видео */
+.video-container {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+}
+
+/* Продукция — слайдер */
+.product-slider {
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 27, 30, 0.9);
+    color: white;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.product-desc {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-slide:hover .product-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swiper-pagination-bullet {
+    background: var(--gold);
+}
+
+/* Кнопка каталога */
+.btn-download {
+    margin-top: 2rem;
+    background: var(--green);
+    color: white;
+}
+
+/* Команда */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 90%;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.investors {
+    margin-top: 2rem;
+    font-style: italic;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Контакты */
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact-info a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.map-container {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#mobileHeader {
+    display: none;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--dark);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .swiper-slide {
+        height: 250px;
+    }
+
+    .progress-bar {
+        width: 50px;
+        height: 2px;
+    }
+
+    #mobileHeader {
+        display: block;
+    }
+}
