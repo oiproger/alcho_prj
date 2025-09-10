@@ -358,5 +358,7 @@ video {
 
     #mobileHeader {
         display: block;
+        margin-left: 50%;
+        align-items: flex-end;
     }
 }

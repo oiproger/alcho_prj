@@ -3,9 +3,20 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 const progressMobile = document.getElementById("progress-mobile");
 const currentSection = document.getElementById("currentSection");
+const mailForm = document.getElementById("mailForm");
+const btnForm = document.getElementById("btnForm");
+const mailTheme = document.getElementById("mailTheme");
+const mailContent = document.getElementById("mailContent");
+
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+});
+
+btnForm.addEventListener("click", () => {
+  mailForm.setAttribute("action", `mailto:test@test.com?subject=${mailTheme.value}&body=${mailContent.value}`);
+  console.log(mailTheme.value);
+  mailForm.submit();
 });
 
 // Получаем все прогресс-бары
@@ -54,6 +65,8 @@ const updateProgress = () => {
       const progress = Math.max(0, Math.min(100, (sectionScroll / height) * 100));
       console.log(progress);
       progressBars[key].style.width = `${progress}%`;
+      progressMobile.style.width = `${progress}%`;
+      currentSection.textContent = section_names[key];
     } else if (scrollPosition >= top) {
       resetAllProgress(true, progressBars[key]);
     } else if (scrollPosition <= bottom) {

@@ -237,17 +237,17 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef" width="100%" height="300"
                 frameborder="0"></iframe>
         </div>
-        <form class="contact-form">
+        <form class="contact-form" id="mailForm">
             <input type="text" placeholder="Имя" required>
             <input type="text" placeholder="Компания">
             <input type="email" placeholder="Email" required>
-            <select>
+            <select id="mailTheme">
                 <option>Дистрибуция</option>
                 <option>Оптовые заказы</option>
                 <option>Маркетинг</option>
             </select>
-            <textarea placeholder="Сообщение"></textarea>
-            <button type="submit" class="btn">Отправить</button>
+            <textarea placeholder="Сообщение" id="mailContent"></textarea>
+            <button type="submit" class="btn" id="btnForm">Отправить</button>
         </form>
     </section>
 
