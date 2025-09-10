@@ -204,7 +204,7 @@ video {
 .swiper-slide img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -316,6 +316,24 @@ video {
     display: none;
 }
 
+#louis-img {
+    background: radial-gradient(#5A0F19, #6e1c29);
+}
+#diplomat-img {
+    background: radial-gradient(#c88d31, #CC9944);
+}
+#green-label-img {
+    background: radial-gradient(#144E35, #067B47);
+}
+#honey-bee-img {
+    background: radial-gradient(#6b2731, #7D1A2A);
+}
+#blue-riband-img {
+    background: radial-gradient(#32315C, #494B90);
+}
+#white-mischief-img {
+    background: radial-gradient(#3a5cca, #5272DD);
+}
 /* Мобильная адаптация */
 @media (max-width: 768px) {
     .nav-links {
