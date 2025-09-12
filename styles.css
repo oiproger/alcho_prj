@@ -222,7 +222,7 @@ video {
 /* Продукция — слайдер */
 .product-slider {
     width: 90%;
-    height: 25rem;
+    height: 30rem;
     max-width: 1000px;
     position: relative;
     margin-bottom: 2rem;
@@ -280,6 +280,26 @@ video {
     line-height: 1.6;
     text-align: right;
 }
+
+/* .product-info-3 {
+    position: absolute;
+    padding-top: 20%;
+    bottom: 0;
+    left: 27.5%;
+    width: 45%;
+    height: 30%;
+    background: #0d1b1eab;
+    color: #ccc;
+    padding: 1rem;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.7s ease-out 0.1s; /* Задержка 0.1с */
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+} */
 
 .product-info h3 {
     margin: 0;
@@ -406,7 +426,8 @@ video {
 
 .swiper-slide-active .product-img,
 .swiper-slide-active .product-info,
-.swiper-slide-active .product-info-2 {
+.swiper-slide-active .product-info-2,
+.swiper-slide-active .product-info-3 {
   opacity: 1;
   transform: translateY(0);
 }
@@ -417,7 +438,9 @@ video {
 .swiper-slide-prev .product-info,
 .swiper-slide-next .product-info,
 .swiper-slide-prev .product-info-2,
-.swiper-slide-next .product-info-2 {
+.swiper-slide-next .product-info-2,
+.swiper-slide-prev .product-info-3,
+.swiper-slide-next .product-info-3 {
   opacity: 0;
   transform: translateY(50px);
 }
