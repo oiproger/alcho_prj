@@ -71,21 +71,19 @@
     </nav>
 
     <!-- Главная -->
-    <section id="home" class="hero">
+    <section id="home" class="section hero">
         <div class="hero-content">
             <h1>TransBrew International</h1>
             <p>Эксклюзивный представитель портфеля InBrew Beverages в Российской Федерации</p>
-            <p><em>Исключительные вкусы. Вечная элегантность. Глобальное наследие.</em></p>
-            <div class="cta-buttons">
-                <a href="#products" class="btn">Каталог продукции</a>
-                <a href="catalog.pdf" class="btn btn-outline" download>Скачать PDF</a>
-            </div>
+            <p><em style="color: var(--gold); text-shadow: #977e29 1px 0 10px;">Исключительные вкусы. Вечная
+                    элегантность. Глобальное наследие.</em></p>
         </div>
     </section>
 
     <!-- Показатели -->
-    <section id="stats" class="section">
-        <h2>#1 В мире спиртных напитков по объему в Индии</h2>
+    <section id="stats" class="section section-one">
+        <h1 class="numone"><strong>#1</strong></h1>
+        <h2>В мире спиртных напитков по объему в Индии</h2>
         <div class="stats-grid">
             <div class="stat"><strong>31</strong> производственная площадка</div>
             <div class="stat"><strong>46 млн+</strong> ящиков в год</div>
@@ -94,16 +92,18 @@
             <div class="stat"><strong>$1.4 млрд</strong> выручки (FY25E)</div>
             <div class="stat"><strong>8 млн ящиков</strong> пива (рост ~50%)</div>
         </div>
+
+        <img id="main-img" src="images/allalco.png">
     </section>
 
     <!-- О компании -->
-    <section id="about" class="section">
+    <section id="about" class="section section-two">
         <h2>О компании</h2>
-        <p>
+        <h3 style="text-align: center;">
             Акционерное общество «ТРАНСБРЮ ИНТЕРНЕЙШНЛ» — эксклюзивный дистрибьютор премиальных брендов
             <strong>InBrew Beverages</strong> на территории Российской Федерации. Мы объединяем богатое наследие
             индийского производства и европейские стандарты качества.
-        </p>
+        </h3>
         <div class="video-container">
             <video controls>
                 <source src="inbrew-story.mp4" type="video/mp4">
@@ -113,17 +113,45 @@
     </section>
 
     <!-- Продукция (слайдер) -->
-    <section id="products" class="section">
+    <section id="products" class="section section-one">
         <h2>Премиальный портфель брендов</h2>
         <div class="swiper product-slider">
             <div class="swiper-wrapper">
                 <!-- Louis Vernant XO -->
                 <div class="swiper-slide product-slide">
-                    <img id="louis-img" src="images/louis-vernant.png" alt="Louis Vernant XO">
+                    <img class="product-img" id="louis-img" src="images/louis-vernant.png" alt="Louis Vernant XO">
                     <div class="product-info">
                         <h3>Louis Vernant XO</h3>
                         <div class="product-desc">
-                            <p>Французские коньячные спирты, ручной отбор. Символ вечной элегантности.</p>
+                            <p>Французские коньячные спирты, ручной отбор. Символ вечной элегантности.
+                                История, <strong>Louis Vernant XO</strong>
+                                начинается с истории
+                                французского дворянина, известного своим тонким
+                                вкусом. Его неустанное стремление к совершенству
+                                привело к созданию бренди, которому суждено было
+                                стать воплощением роскоши. Любимый королевскими особами и аристократией на протяжении многих
+                                поколений, <strong>Louis Vernant XO</strong> воплощает в себе
+                                величие ушедшей эпохи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-info-2">
+                        <div class="product-desc">
+                            <p>Этот исключительный бренди, изготовленный с
+                            особой
+                            тщательностью,
+                            представляет
+                            собой
+                            гармоничную смесь отборных вручную французских
+                            коньячныхспиртов.
+                            Опыт наших мастеров-блендеровгарантирует,
+                            что
+                            каждая
+                            бутылка
+                            отражает суть видения Луи Вернана.
+                            Символ вечной элегантности, <strong>Louis Vernant XO</strong> - это
+                            больше, чем просто бренди; это опыт, который
+                            перенесет вас в мир изобилия и изысканности.</p>
                             <p><strong>ABV:</strong> 40%</p>
                         </div>
                     </div>
@@ -131,7 +159,7 @@
 
                 <!-- Diplomat Whisky -->
                 <div class="swiper-slide product-slide">
-                    <img id="diplomat-img" src="images/diplomat.png" alt="Diplomat Whisky">
+                    <img class="product-img" id="diplomat-img" src="images/diplomat.png" alt="Diplomat Whisky">
                     <div class="product-info">
                         <h3>Diplomat Whisky</h3>
                         <div class="product-desc">
@@ -143,7 +171,7 @@
 
                 <!-- Green Label -->
                 <div class="swiper-slide product-slide">
-                    <img id="green-label-img" src="images/green-label.png" alt="Green Label">
+                    <img class="product-img" id="green-label-img" src="images/green-label.png" alt="Green Label">
                     <div class="product-info">
                         <h3>Green Label Barrel Special</h3>
                         <div class="product-desc">
@@ -155,7 +183,7 @@
 
                 <!-- Honey Bee Brandy -->
                 <div class="swiper-slide product-slide">
-                    <img id="honey-bee-img" src="images/honey-bee.png" alt="Honey Bee Brandy">
+                    <img class="product-img" id="honey-bee-img" src="images/honey-bee.png" alt="Honey Bee Brandy">
                     <div class="product-info">
                         <h3>Honey Bee Brandy</h3>
                         <div class="product-desc">
@@ -167,7 +195,7 @@
 
                 <!-- Blue Riband Gin -->
                 <div class="swiper-slide product-slide">
-                    <img id="blue-riband-img" src="images/blue-riband.png" alt="Blue Riband Gin">
+                    <img class="product-img" id="blue-riband-img" src="images/blue-riband.png" alt="Blue Riband Gin">
                     <div class="product-info">
                         <h3>Blue Riband Gin</h3>
                         <div class="product-desc">
@@ -179,7 +207,8 @@
 
                 <!-- White Mischief Vodka -->
                 <div class="swiper-slide product-slide">
-                    <img id="white-mischief-img" src="images/white-mischief.png" alt="White Mischief Vodka">
+                    <img class="product-img" id="white-mischief-img" src="images/white-mischief.png"
+                        alt="White Mischief Vodka">
                     <div class="product-info">
                         <h3>White Mischief Vodka</h3>
                         <div class="product-desc">
@@ -195,7 +224,7 @@
     </section>
 
     <!-- Команда -->
-    <section id="team" class="section">
+    <section id="team" class="section section-two">
         <h2>Команда и инвесторы</h2>
         <div class="team-grid">
             <div class="team-member">
@@ -219,11 +248,12 @@
                 <p>CBO (Beer)</p>
             </div>
         </div>
-        <p class="investors">Портфель InBrew включает 43 бренда от Diageo India и бизнес Molson Coors в Индии.</p>
+        <p class="investors">Портфель InBrew включает 43 бренда от Diageo India и бизнес Molson Coors в
+            Индии.</p>
     </section>
 
     <!-- Контакты -->
-    <section id="contacts" class="section">
+    <section id="contacts" class="section section-one">
         <h2>Контакты</h2>
         <div class="contact-info">
             <p><strong>Компания:</strong> АО «ТРАНСБРЮ ИНТЕРНЕЙШНЛ»</p>

@@ -63,7 +63,6 @@ const updateProgress = () => {
       // Считаем прогресс внутри секции
       const sectionScroll = scrollPosition - top;
       const progress = Math.max(0, Math.min(100, (sectionScroll / height) * 100));
-      console.log(progress);
       progressBars[key].style.width = `${progress}%`;
       progressMobile.style.width = `${progress}%`;
       currentSection.textContent = section_names[key];
@@ -76,25 +75,58 @@ const updateProgress = () => {
   }
 };
 
+const sections_elms = document.querySelectorAll('.section');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1, // Анимация запускается, когда 10% блока в зоне видимости
+  rootMargin: '0px 0px -100px 0px' // Подгружаем чуть раньше, чем доскроллили
+});
+
+// Наблюдаем за каждой секцией
+sections_elms.forEach(section => {
+  sectionObserver.observe(section);
+});
+
 // Инициализация Swiper
-new Swiper('.product-slider', {
+const swiper = new Swiper('.product-slider', {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 1,
+    }
+  },
+  on: {
+    init: function () {
+    },
+    slideChange: function () {
+      // Сброс анимации для старого слайда
+      const prevSlide = this.slides[this.previousIndex];
+      const currentSlide = this.slides[this.activeIndex];
+
+      // Убираем классы/состояния
+      prevSlide.classList.remove('animated');
     }
   }
 });
-
 // Слушатели
 window.addEventListener('scroll', updateProgress);
 window.addEventListener('resize', updateProgress);
