@@ -515,9 +515,13 @@ video {
         height: 2px;
     }
 
+    #logo-img {
+        width: 5.5rem;
+    }
+
     #mobileHeader {
         display: block;
-        margin-left: 50%;
+        margin-left: 25%;
         align-items: flex-end;
     }
 }
