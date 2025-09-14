@@ -221,7 +221,7 @@ video {
 
 /* Продукция — слайдер */
 .product-slider {
-    width: 90%;
+    width: 100%;
     height: 30rem;
     max-width: 1000px;
     position: relative;
@@ -258,8 +258,8 @@ video {
     transform: translateY(-50px);
     transition: all 0.7s ease-out 0.1s;
     color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.4;
     text-align: left;
 }
 .product-info-2 {
@@ -276,30 +276,32 @@ video {
     transform: translateY(-50px);
     transition: all 0.7s ease-out 0.1s; /* Задержка 0.1с */
     color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.4;
     text-align: right;
 }
 
-/* .product-info-3 {
+.product-info-3 {
     position: absolute;
     padding-top: 20%;
-    bottom: 0;
-    left: 27.5%;
-    width: 45%;
-    height: 30%;
-    background: #0d1b1eab;
+    bottom: 12.5%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+    background: #0d1b1ebd;
     color: #ccc;
     padding: 1rem;
     border-radius: 10px 10px 10px 10px;
     opacity: 0;
     transform: translateY(-50px);
-    transition: all 0.7s ease-out 0.1s; /* Задержка 0.1с */
-    /* color: #ccc;
+    transition: all 0.7s ease-out 0.1s;
+    color: #ccc;
     font-size: 0.95rem;
     line-height: 1.6;
     text-align: center;
-} */ */
+    z-index: 0;
+    backdrop-filter: blur(5px);
+} 
 
 .product-info h3 {
     margin: 0;
@@ -448,6 +450,24 @@ video {
     text-shadow: #2d479c 1px 0 10px;
 }
 
+#oldtavern-img {
+    background: radial-gradient(#e8bd57, #e8bd5700, #e8bd5700);
+}
+
+.oldtavern {
+    color: #e8bd57;
+    text-shadow: #c5a04a 1px 0 10px;
+}
+
+#oldcask-img {
+    background: radial-gradient(#e8c36a, #e8c36a00, #e8c36a00);
+}
+
+.oldcask {
+    color: #e8c36a;
+    text-shadow: #bd9e56 1px 0 10px;
+}
+
 #main-img {
     object-fit: contain;
     transform: translateY(8em);
@@ -478,6 +498,12 @@ video {
 .swiper-slide-next .product-info-3 {
   opacity: 0;
   transform: translateY(50px);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    padding-top: 15rem;
+    color: var(--gold);
 }
 
 #logo-img {
