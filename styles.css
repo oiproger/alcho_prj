@@ -397,20 +397,55 @@ video {
 #louis-img {
     background: radial-gradient(#8a6222, #6e1c2905, #6e1c2900);
 }
+
+.louis {
+    color: #8a6222;
+    text-shadow: #977e29 1px 0 10px;
+}
+
 #diplomat-img {
     background: radial-gradient(#c88d31, #CC994405, #CC994400);
 }
+
+.diplomat {
+    color: #c88d31;
+    text-shadow: #b8822c 1px 0 10px;
+}
+
 #green-label-img {
     background: radial-gradient(#144E35, #067B4705, #067B4700);
 }
+
+.green-label {
+    color: #1d724d;
+    text-shadow: #12442e 1px 0 10px;
+}
+
 #honey-bee-img {
     background: radial-gradient(#6b2731, #7D1A2A05, #7D1A2A00);
 }
+
+.bee {
+    color: #943544;
+    text-shadow: #501d24 1px 0 10px;
+}
+
 #blue-riband-img {
     background: radial-gradient(#32315C, #494B9005, #494B9000);
 }
+
+.riband {
+    color: #464585;
+    text-shadow: #262647 1px 0 10px;
+}
+
 #white-mischief-img {
     background: radial-gradient(#3a5cca, #5272DD05, #5272DD00);
+}
+
+.mischief {
+    color: #3a5cca;
+    text-shadow: #2d479c 1px 0 10px;
 }
 
 #main-img {
