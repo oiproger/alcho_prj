@@ -685,7 +685,64 @@ video {
 .contacts-txt {
     color: var(--black);
 }
+/* Лента продукции — исправленная версия */
+.product-ticker {
+  width: 150%;
+  overflow: hidden;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
 
+.ticker-track {
+  display: flex;
+  /* Убираем перенос строк */
+  flex-wrap: nowrap;
+  /* Выравнивание по центру вертикально */
+  align-items: center;
+  /* Общая ширина — 2x от оригинального блока */
+  width: 200%; /* Критично для бесшовности */
+  /* Анимация: полный проход за 60 секунд */
+  animation: ticker-scroll 120s linear infinite;
+}
+
+.ticker-item {
+  flex: 0 0 auto;;
+  margin: 0 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.ticker-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.ticker-item img {
+  height: 30vh;
+  border-radius: 10px;
+}
+
+/* Анимация: двигаем на -50%, чтобы второй дубликат заменил первый */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .ticker-item {
+    width: 140px;
+    margin: 0 0.8rem;
+  }
+
+  .ticker-track {
+    animation: ticker-scroll 180s linear infinite;
+  }
+}
 /* Мобильная адаптация */
 @media (max-width: 768px) {
     .nav-links {
