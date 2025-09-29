@@ -434,7 +434,7 @@ video {
     border: 1px solid #444;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.1);
-    color: var(--firmOne);
+    color: var(--light);
 }
 
 #mobileHeader {
@@ -685,6 +685,13 @@ video {
 .contacts-txt {
     color: var(--black);
 }
+
+#contacts {
+    background-image: url("images/os.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* Лента продукции — исправленная версия */
 .product-ticker {
   width: 150%;
