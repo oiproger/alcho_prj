@@ -29,6 +29,7 @@ const progressBars = {
   about: document.getElementById('progress-about'),
   guarantee: document.getElementById('progress-guarantee'),
   products: document.getElementById('progress-products'),
+  partners: document.getElementById('progress-partners'),
   contacts: document.getElementById('progress-contacts')
 };
 
@@ -38,14 +39,16 @@ const sections = {
   about: document.getElementById('about'),
   guarantee: document.getElementById('guarantee'),
   products: document.getElementById('products'),
+  partners: document.getElementById('partners'),
   contacts: document.getElementById('contacts')
 };
 
 const section_names = {
   stats: "Показатели",
   about: "О компании",
-  guarantee: "Гарантия",
+  guarantee: "Производство",
   products: "Продукция",
+  partners: "Партнёры",
   contacts: "Контакты",
 };
 

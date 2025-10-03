@@ -35,7 +35,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: #120724ad;
+    background: #000000ad;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -688,7 +688,7 @@ video {
 
 #contacts {
     background-image: url("images/os.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
