@@ -731,7 +731,7 @@ video {
   /* Общая ширина — 2x от оригинального блока */
   width: 200%; /* Критично для бесшовности */
   /* Анимация: полный проход за 60 секунд */
-  animation: ticker-scroll 20s linear infinite;
+  animation: ticker-scroll 80s linear infinite;
 }
 
 .ticker-item {
