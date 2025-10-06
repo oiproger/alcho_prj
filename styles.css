@@ -119,7 +119,7 @@ h3 {
 .hero h1 {
     font-size: 3.5rem;
     color: var(--light);
-    text-shadow: var(--black-green) 1px 0 10px;
+    text-shadow: var(--black-green) 1px 0 3px;
 }
 
 .hero p {
@@ -173,6 +173,7 @@ h3 {
 .numone {
     transform: translateY(20px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    font-size: 7rem;
     color: var(--green);
 }
 
@@ -216,7 +217,7 @@ h1 {
 }
 
 .section-one h2 {
-    color: var(--green);
+    color: var(--black-green);
 }
 
 .section-one h3 {
@@ -228,7 +229,8 @@ h1 {
 }
 
 .section-two strong {
-    color: var(--green);
+    color: var(--black-green);
+    text-shadow: none;
 }
 
 .section-three {
@@ -240,8 +242,8 @@ h1 {
 }
 
 strong {
-    color: var(--green);
-    text-shadow: #c0b7ce 1px 0 10px;
+    color: var(--black-green);
+    text-shadow: #c0b7ce 1px 0 3px;
 }
 
 /* Показатели */
@@ -425,7 +427,7 @@ video {
 }
 
 .contact-info a {
-    color: var(--firmTwo);
+    color: var(--black-green);
     text-decoration: none;
 }
 
@@ -469,7 +471,7 @@ video {
 
 .louis {
     color: #8a6222;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #diplomat-img {
@@ -478,7 +480,7 @@ video {
 
 .diplomat {
     color: #c88d31;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #green-label-img {
@@ -487,7 +489,7 @@ video {
 
 .green-label {
     color: #1d724d;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #honey-bee-img {
@@ -496,7 +498,7 @@ video {
 
 .bee {
     color: #943544;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #blue-riband-img {
@@ -505,7 +507,7 @@ video {
 
 .riband {
     color: #464585;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #white-mischief-img {
@@ -514,7 +516,7 @@ video {
 
 .mischief {
     color: #3a5cca;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #oldtavern-img {
@@ -523,7 +525,7 @@ video {
 
 .oldtavern {
     color: #e8bd57;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #oldcask-img {
@@ -532,7 +534,7 @@ video {
 
 .oldcask {
     color: #e8c36a;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #black-stallion-img {
@@ -541,7 +543,7 @@ video {
 
 .black-stallion {
     color: #815317;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #haywards-img {
@@ -550,7 +552,7 @@ video {
 
 .haywards {
     color: #dab254;
-    text-shadow: #977d2900 1px 0 10px;
+    text-shadow: #977d2900 1px 0 3px;
 }
 
 #main-img {
