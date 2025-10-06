@@ -2,11 +2,13 @@
     --dark: #0D1B1E;
     --gold: #D4AF37;
     --light: #fffcf7;
-    --green: #0A5C36;
-    --black-green: #073f25;
+    --green: #1FB04D;
+    --black-green: #2c491c;
     --gray: #333;
-    --firmOne: #502C8B;
-    --firmTwo: #00AF52;
+    --firmOne: #43438F;
+    --firmTwo: #E8F1EB;
+    --sectOne: #E8F1EB;
+    --sectTwo: #FFFFFF;
 }
 
 * {
@@ -16,7 +18,7 @@
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family:"Open Sans",Helvetica,Arial,sans-serif;
     background: var(--dark);
     color: white;
     overflow-x: hidden;
@@ -24,9 +26,14 @@ body {
 
 h1,
 h2,
-h3,
 h4 {
-    font-family: 'Playfair Display', serif;
+    font-family:"Font Awesome 5 Brands";
+    font-style: normal;
+    font-weight: normal;
+}
+
+h3 {
+    font-family:"Open Sans",Helvetica,Arial,sans-serif;
 }
 
 /* Навигация */
@@ -85,17 +92,17 @@ h4 {
 
 .progress-fill {
     height: 100%;
-    background: var(--firmTwo);
+    background: var(--green);
     width: 0%;
     transition: width 0.1s linear;
-    box-shadow: 0 0 10px var(--firmTwo);
+    box-shadow: 0 0 10px var(--green);
 }
 
 .hamburger {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
-    color: var(--firmTwo);
+    color: var(--green);
 }
 
 /* Главный экран */
@@ -112,6 +119,7 @@ h4 {
 .hero h1 {
     font-size: 3.5rem;
     color: var(--light);
+    text-shadow: var(--black-green) 1px 0 10px;
 }
 
 .hero p {
@@ -165,6 +173,26 @@ h4 {
 .numone {
     transform: translateY(20px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    color: var(--green);
+}
+
+section:not(#home) {
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4),   /* Основная глубокая тень */
+    0 0 20px rgba(212, 175, 55, 0.1), /* Внутреннее свечение (золото) */
+    inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Легкая внутренняя подсветка */
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 5%;
+  margin: 2rem auto;
+  max-width: 96%;
+}
+
+small {
+    color: var(--black-green);
 }
 
 .section.visible {
@@ -175,21 +203,24 @@ h4 {
 .section h2,
 h1 {
     font-size: 2.5rem;
-    color: var(--firmOne);
+    color: var(--black-green);
     text-align: center;
 }
 
 .section-one {
-    background-color: var(--firmOne);
+    background-color: var(--sectTwo);
 }
 
 .section-two {
-    background-color: var(--light);
+    background-color: var(--sectOne);
 }
 
 .section-one h2 {
-    color: #04d164;
-    text-shadow: var(--firmTwo) 1px 0 10px;
+    color: var(--green);
+}
+
+.section-one h3 {
+    color: var(--dark);
 }
 
 .section-two h3, h2 {
@@ -197,7 +228,7 @@ h1 {
 }
 
 .section-two strong {
-    color: var(--firmOne);
+    color: var(--green);
 }
 
 .section-three {
@@ -209,7 +240,7 @@ h1 {
 }
 
 strong {
-    color: var(--light);
+    color: var(--green);
     text-shadow: #c0b7ce 1px 0 10px;
 }
 
@@ -225,7 +256,7 @@ strong {
 
 .stat {
     font-size: 1.2rem;
-    font-weight: bold;
+    color: var(--dark);
 }
 
 /* Видео */
@@ -272,12 +303,11 @@ video {
     width: 35%;
     height: 100%;
     /* background: #0d1b1eab; */
-    color: #ccc;
     border-radius: 10px 10px 10px 10px;
     opacity: 0;
     transform: translateY(-50px);
     transition: all 0.7s ease-out 0.1s;
-    color: #ccc;
+    color: var(--dark);
     font-size: 1.2vw;
     line-height: 1.4;
     text-align: left;
@@ -291,13 +321,12 @@ video {
     width: 35%;
     height: 100%;
     /* background: #0d1b1eab; */
-    color: #ccc;
     border-radius: 10px 10px 10px 10px;
     opacity: 0;
     transform: translateY(-50px);
     transition: all 0.7s ease-out 0.1s;
     /* Задержка 0.1с */
-    color: #ccc;
+    color: var(--dark);
     font-size: 1.2vw;
     line-height: 1.4;
     text-align: right;
@@ -360,13 +389,6 @@ video {
 
 .swiper-pagination-bullet {
     background: var(--gold);
-}
-
-/* Кнопка каталога */
-.btn-download {
-    margin-top: 2rem;
-    background: var(--green);
-    color: white;
 }
 
 /* Команда */
@@ -442,57 +464,57 @@ video {
 }
 
 #louis-img {
-    background: radial-gradient(#8a6222, #6e1c2905, #6e1c2900);
+    background: radial-gradient(#8a6222, #6e1c2a00, #6e1c2a00);
 }
 
 .louis {
     color: #8a6222;
-    text-shadow: #977e29 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #diplomat-img {
-    background: radial-gradient(#c88d31, #CC994405, #CC994400);
+    background: radial-gradient(#c88d31, #cc9a4400, #cc9a4400);
 }
 
 .diplomat {
     color: #c88d31;
-    text-shadow: #b8822c 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #green-label-img {
-    background: radial-gradient(#144E35, #067B4705, #067B4700);
+    background: radial-gradient(#144E35, #067b4600, #067b4600);
 }
 
 .green-label {
     color: #1d724d;
-    text-shadow: #12442e 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #honey-bee-img {
-    background: radial-gradient(#9b3746, #7D1A2A05, #7D1A2A00);
+    background: radial-gradient(#9b3746, #7d1a2a00, #7d1a2a00);
 }
 
 .bee {
     color: #943544;
-    text-shadow: #501d24 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #blue-riband-img {
-    background: radial-gradient(#32315C, #494B9005, #494B9000);
+    background: radial-gradient(#32315C, #494b9000, #494b9000);
 }
 
 .riband {
     color: #464585;
-    text-shadow: #262647 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #white-mischief-img {
-    background: radial-gradient(#3a5cca, #5272DD05, #5272DD00);
+    background: radial-gradient(#3a5cca, #5272dd00, #5272dd00);
 }
 
 .mischief {
     color: #3a5cca;
-    text-shadow: #2d479c 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #oldtavern-img {
@@ -501,16 +523,16 @@ video {
 
 .oldtavern {
     color: #e8bd57;
-    text-shadow: #c5a04a 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #oldcask-img {
-    background: radial-gradient(#e8c36a, #e8c36a00, #e8c36a00);
+    background: radial-gradient(#e8c36a, #e8c26a00, #e8c26a00);
 }
 
 .oldcask {
     color: #e8c36a;
-    text-shadow: #bd9e56 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #black-stallion-img {
@@ -519,7 +541,7 @@ video {
 
 .black-stallion {
     color: #815317;
-    text-shadow: #613f12 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #haywards-img {
@@ -528,7 +550,7 @@ video {
 
 .haywards {
     color: #dab254;
-    text-shadow: #d6a737 1px 0 10px;
+    text-shadow: #977d2900 1px 0 10px;
 }
 
 #main-img {
@@ -592,7 +614,7 @@ video {
 .filter-btn {
     padding: 0.6rem 1.2rem;
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--black-green);
     border: 1px solid #555;
     border-radius: 30px;
     cursor: pointer;
@@ -694,7 +716,7 @@ video {
 
 /* Лента продукции — исправленная версия */
 .product-ticker {
-  width: 150%;
+  width: 111.6%;
   overflow: hidden;
   padding: 2rem 0;
   margin-top: 3rem;
@@ -709,11 +731,11 @@ video {
   /* Общая ширина — 2x от оригинального блока */
   width: 200%; /* Критично для бесшовности */
   /* Анимация: полный проход за 60 секунд */
-  animation: ticker-scroll 120s linear infinite;
+  animation: ticker-scroll 20s linear infinite;
 }
 
 .ticker-item {
-  flex: 0 0 auto;;
+  flex: 0 0 auto;
   margin: 0 1rem;
   opacity: 0.8;
   transition: opacity 0.3s, transform 0.3s;
@@ -735,7 +757,7 @@ video {
     transform: translateX(50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-75%);
   }
 }
 
@@ -755,13 +777,14 @@ video {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: var(--dark);
+        background: #000000ad;
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
         padding: 1rem;
         gap: 1rem;
+        backdrop-filter: blur(5px);
     }
 
     .nav-links.active {
@@ -770,7 +793,7 @@ video {
 
     .hamburger {
         display: block;
-        padding-right: 13rem;
+        padding-right: 1.5rem;
     }
 
     .hero h1 {
@@ -788,8 +811,13 @@ video {
 
     #mobileHeader {
         display: block;
-        margin-left: 15%;
+        padding-left: 30%;
+        width: 15rem;
         align-items: flex-end;
+    }
+
+    #currentSection {
+        font-size: 3.3vw;
     }
 
     .stats-grid {
