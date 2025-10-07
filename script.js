@@ -9,10 +9,12 @@ const mailForm = document.getElementById("mailForm");
 const btnForm = document.getElementById("btnForm");
 const mailTheme = document.getElementById("mailTheme");
 const mailContent = document.getElementById("mailContent");
+const logo_img_elm = document.getElementById("logo-img");
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 let currentFilter = 'all';
 let swiperInstance = null;
+let cOnce = 0;
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
@@ -68,6 +70,12 @@ const resetAllProgress = (xVal = false, xBar) => {
 // Обновление прогресса для активной секции
 const updateProgress = () => {
   const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+  if (cOnce >= 2) {
+    logo_img_elm.classList.add("logo-active");
+  } else {
+    cOnce++;
+  }
 
   for (const [key, section] of Object.entries(sections)) {
     const top = section.offsetTop;

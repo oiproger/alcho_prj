@@ -2,13 +2,14 @@
     --dark: #0D1B1E;
     --gold: #D4AF37;
     --light: #fffcf7;
-    --green: #1FB04D;
-    --black-green: #2c491c;
+    --green: #5454bb;
+    --black-green: #31316e;
     --gray: #333;
-    --firmOne: #43438F;
+    --firmOne: #434390;
     --firmTwo: #E8F1EB;
     --sectOne: #E8F1EB;
     --sectTwo: #FFFFFF;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -78,7 +79,7 @@ h3 {
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+    color: var(--green);
 }
 
 /* Прогресс-бар под пунктом */
@@ -119,7 +120,7 @@ h3 {
 .hero h1 {
     font-size: 3.5rem;
     color: var(--light);
-    text-shadow: var(--black-green) 1px 0 3px;
+    /* text-shadow: var(--black-green) 1px 0 3px; */
 }
 
 .hero p {
@@ -230,7 +231,7 @@ h1 {
 
 .section-two strong {
     color: var(--black-green);
-    text-shadow: none;
+    /* text-shadow: none; */
 }
 
 .section-three {
@@ -243,7 +244,7 @@ h1 {
 
 strong {
     color: var(--black-green);
-    text-shadow: #c0b7ce 1px 0 3px;
+    /* text-shadow: #c0b7ce 1px 0 3px; */
 }
 
 /* Показатели */
@@ -471,7 +472,7 @@ video {
 
 .louis {
     color: #8a6222;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #diplomat-img {
@@ -480,7 +481,7 @@ video {
 
 .diplomat {
     color: #c88d31;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #green-label-img {
@@ -489,7 +490,7 @@ video {
 
 .green-label {
     color: #1d724d;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #honey-bee-img {
@@ -498,7 +499,7 @@ video {
 
 .bee {
     color: #943544;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #blue-riband-img {
@@ -507,7 +508,7 @@ video {
 
 .riband {
     color: #464585;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #white-mischief-img {
@@ -516,7 +517,7 @@ video {
 
 .mischief {
     color: #3a5cca;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #oldtavern-img {
@@ -525,7 +526,7 @@ video {
 
 .oldtavern {
     color: #e8bd57;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #oldcask-img {
@@ -534,7 +535,7 @@ video {
 
 .oldcask {
     color: #e8c36a;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #black-stallion-img {
@@ -543,7 +544,7 @@ video {
 
 .black-stallion {
     color: #815317;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #haywards-img {
@@ -552,7 +553,7 @@ video {
 
 .haywards {
     color: #dab254;
-    text-shadow: #977d2900 1px 0 3px;
+    /* text-shadow: #977d2900 1px 0 3px; */
 }
 
 #main-img {
@@ -685,6 +686,11 @@ video {
 
 #logo-img {
     width: 10rem;
+    transition: all 0.8s ease-out;
+}
+
+#logo-img.logo-active {
+    filter: brightness(0) invert(1);
 }
 
 .product-name {
@@ -733,7 +739,8 @@ video {
   /* Общая ширина — 2x от оригинального блока */
   width: 200%; /* Критично для бесшовности */
   /* Анимация: полный проход за 60 секунд */
-  animation: ticker-scroll 80s linear infinite;
+  
+  animation: ticker-scroll 45s linear infinite;
 }
 
 .ticker-item {
