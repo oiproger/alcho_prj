@@ -2,10 +2,10 @@
     --dark: #0D1B1E;
     --gold: #D4AF37;
     --light: #fffcf7;
-    --green: #5454bb;
-    --black-green: #31316e;
+    --green: #3a6f88;
+    --black-green: rgb(36, 68, 83);
     --gray: #333;
-    --firmOne: #434390;
+    --firmOne: #3f738b;
     --firmTwo: #E8F1EB;
     --sectOne: #E8F1EB;
     --sectTwo: #FFFFFF;
@@ -43,7 +43,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background: #000000ad;
+    background: #0000009f;
     position: fixed;
     width: 100%;
     z-index: 100;
