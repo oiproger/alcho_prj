@@ -9,6 +9,7 @@
     --firmTwo: #E8F1EB;
     --sectOne: #E8F1EB;
     --sectTwo: #FFFFFF;
+    --testHero: #295727;
     scroll-behavior: smooth;
 }
 
@@ -109,7 +110,7 @@ h3 {
 /* Главный экран */
 .hero {
     height: 100vh;
-    background: var(--firmOne);
+    background: var(--testHero);
     display: flex;
     align-items: center;
     justify-content: center;
