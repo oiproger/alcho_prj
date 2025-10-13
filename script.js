@@ -10,6 +10,9 @@ const btnForm = document.getElementById("btnForm");
 const mailTheme = document.getElementById("mailTheme");
 const mailContent = document.getElementById("mailContent");
 const logo_img_elm = document.getElementById("logo-img");
+const agecontent_elm = document.getElementById("age-content");
+const btnAgeYes_elm = document.getElementById("btnAgeYes");
+const btnAgeNo_elm = document.getElementById("btnAgeNo");
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 let currentFilter = 'all';
@@ -70,11 +73,8 @@ const resetAllProgress = (xVal = false, xBar) => {
 // Обновление прогресса для активной секции
 const updateProgress = () => {
   const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-  if (cOnce >= 2) {
+  if (window.scrollY >= 150) {
     logo_img_elm.classList.add("logo-active");
-  } else {
-    cOnce++;
   }
 
   for (const [key, section] of Object.entries(sections)) {
@@ -119,6 +119,20 @@ sections_elms.forEach(section => {
 // Слушатели
 window.addEventListener('scroll', updateProgress);
 window.addEventListener('resize', updateProgress);
+window.addEventListener("load", () => {
+  const hVerify = localStorage.getItem("ageVerify");
+  if (!hVerify) {
+    console.log(agecontent_elm);
+    agecontent_elm.style.display = "block";
+  }
+});
+btnAgeYes_elm.addEventListener("click", () => {
+  agecontent_elm.style.display = "none";
+  localStorage.setItem("ageVerify", 1);
+});
+btnAgeNo_elm.addEventListener("click", () => {
+  window.close();
+});
 
 // Инициализация
 updateProgress();
