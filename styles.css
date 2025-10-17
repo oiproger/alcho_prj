@@ -2,6 +2,7 @@
     --dark: #0D1B1E;
     --gold: #D4AF37;
     --light: #fffcf7;
+    --light-green: #a9c9da;
     --green: #3a6f88;
     --black-green: rgb(36, 68, 83);
     --gray: #333;
@@ -225,6 +226,10 @@ h1 {
     color: var(--dark);
 }
 
+.section-spec {
+    background-color: var(--light-green);
+}
+
 .section-two h3, h2 {
     color: var(--dark);
 }
@@ -395,7 +400,7 @@ video {
 }
 
 .swiper-pagination-bullet {
-    background: var(--gold);
+    background: var(--black-green);
 }
 
 /* Команда */
@@ -538,7 +543,7 @@ video {
 }
 
 .oldtavern {
-    color: #e8bd57;
+    color: #bb8b1b;
     /* text-shadow: #977d2900 1px 0 3px; */
 }
 
@@ -547,7 +552,7 @@ video {
 }
 
 .oldcask {
-    color: #e8c36a;
+    color: #997626;
     /* text-shadow: #977d2900 1px 0 3px; */
 }
 
@@ -565,7 +570,7 @@ video {
 }
 
 .haywards {
-    color: #dab254;
+    color: #c08e1a;
     /* text-shadow: #977d2900 1px 0 3px; */
 }
 
@@ -604,7 +609,7 @@ video {
 .swiper-button-next,
 .swiper-button-prev {
     padding-top: 15rem;
-    color: var(--gold);
+    color: var(--black-green);
 }
 
 /* Анимация слайда при появлении */
@@ -690,12 +695,12 @@ video {
     color: white;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 500px;
     width: 90%;
+    height: 40vw;
     position: relative;
     transform: scale(0.9);
     transition: transform 0.4s ease;
-    box-shadow: 0 0 30px var(--firmOne);
+    font-size: 1.4vw;
     backdrop-filter: blur(5px);
 }
 
@@ -733,6 +738,7 @@ video {
     left: 10%;
     bottom: 97%;
     text-align: center;
+    color: var(--dark);
 }
 
 #zavod-img {

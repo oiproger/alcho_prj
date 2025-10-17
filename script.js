@@ -451,11 +451,10 @@ document.querySelectorAll('.btn-details').forEach(btn => {
     const key = productName.toLowerCase().replace(/\s+/g, '-');
 
     popupTitle.textContent = productName;
-    console.log("key");
     popupDescription.innerHTML = productDetails[key] || 'Описание недоступно.';
 
     popup.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Блокируем скролл
+    // document.body.style.overflow = 'hidden'; // Блокируем скролл
   });
 });
 
