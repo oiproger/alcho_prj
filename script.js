@@ -73,7 +73,7 @@ const resetAllProgress = (xVal = false, xBar) => {
 // Обновление прогресса для активной секции
 const updateProgress = () => {
   const scrollPosition = window.scrollY + window.innerHeight / 2;
-  if (window.scrollY >= 150) {
+  if (window.scrollY >= 350) {
     logo_img_elm.classList.add("logo-active");
   }
 

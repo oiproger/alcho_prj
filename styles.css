@@ -881,13 +881,12 @@ video {
         width: 35%;
         height: 100%;
         /* background: #0d1b1eab; */
-        color: #ccc;
         padding: 1rem;
         border-radius: 10px 10px 10px 10px;
         opacity: 0;
         transform: translateY(-50px);
         transition: all 0.7s ease-out 0.1s;
-        color: #ccc;
+        color: var(--dark);
         font-size: 2.87vw;
         line-height: 1.4;
         text-align: left;
@@ -900,14 +899,13 @@ video {
         width: 35%;
         height: 100%;
         /* background: #0d1b1eab; */
-        color: #ccc;
         padding: 1rem;
         border-radius: 10px 10px 10px 10px;
         opacity: 0;
         transform: translateY(-50px);
         transition: all 0.7s ease-out 0.1s;
         /* Задержка 0.1с */
-        color: #ccc;
+        color: var(--dark);
         font-size: 2.87vw;
         line-height: 1.4;
         text-align: right;
@@ -921,5 +919,9 @@ video {
         opacity: 1;
         transform: translateY(0%);
         transition: all 0.8s ease-out;
+    }
+
+    .ticker-track {
+        animation: ticker-scroll 15s linear infinite;
     }
 }
