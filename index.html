@@ -92,7 +92,7 @@
     <!-- Главная -->
     <section id="home" class="section hero">
         <div class="hero-content">
-            <h1>TransBrew International</h1>
+            <h1 style='font-family: "Open Sans",Helvetica,Arial,sans-serif'>TransBrew International</h1>
             <p>Эксклюзивный представитель портфеля InBrew Beverages в Российской Федерации</p>
             <br/><br/><br/><br/>
             <img src="images/green_ico.png">
@@ -633,14 +633,6 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-
-        <div class="popup-overlay" id="productPopup">
-            <div class="popup-content" id="popupContent">
-                <span class="popup-close" id="popupClose">&times;</span>
-                <h3 id="popupTitle">Название</h3>
-                <p id="popupDescription">Описание товара...</p>
-            </div>
-        </div>
         <a href="catalog.pdf" class="btn filter-btn" download>📥 Скачать каталог (PDF)</a>
     </section>
 
@@ -684,6 +676,62 @@
         </form>
 
     </section>
+
+    <!-- Полноэкранный Popup -->
+<div class="popup-overlay active" id="productPopup">
+  <div class="popup-content" id="popupContent">
+    <span class="popup-close" id="popupClose">&times;</span>
+
+    <!-- Контейнер с изображением и контентом -->
+    <div class="popup-container">
+
+
+      <!-- Контент слева: название, круг, описание -->
+      <div class="popup-text-content">
+        <h2 id="popupTitle">Honey Bee Brandy</h2>
+
+        <!-- Круг с характеристиками -->
+        <div class="brand-wheel">
+          <div class="wheel-center" id="wheel-center">
+            <p id="aboutProduct">Timeless elegance and refined indulgence.</p>
+          </div>
+          <div class="wheel-ring wheel-values" id="wheel-values">
+            <span>ABV: <div id="abvElm"></div></span>
+          </div>
+          <div class="wheel-ring wheel-proposition" id="wheel-proposition">
+          </div>
+          <div class="wheel-ring wheel-pillars" id="wheel-pillars">
+            <span>Аромат <div id="smellElm"></div></span>
+          </div>
+          <div class="wheel-ring wheel-benefits" id="wheel-benefits">
+            <span>Вкус <div id="tasteElm"></div></span>
+          </div>
+          <div class="wheel-ring wheel-essence" id="wheel-essence">
+            <span>Послевкусие <div id="afterTasteElm"></div></span>
+          </div>
+
+
+
+          <div class="wheel-ring wheel-personality" id="wheel-personality">
+          </div>
+        </div>
+
+        <!-- Описание снизу -->
+        <div class="popup-description" id="pop-descr">
+          <div id="popupDescription">
+            lalalalala
+          </div>
+        </div>
+        <!-- Изображение продукта справа (видимо наполовину) -->
+      </div>
+
+      <div class="popup-image-wrapper">
+        <img src="images/honey-bee.png" alt="Honey Bee Brandy" class="popup-image" id="popup-image" />
+      </div>
+
+    </div>
+  </div>
+</div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

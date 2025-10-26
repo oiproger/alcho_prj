@@ -669,57 +669,291 @@ video {
 
 
 /* Popup */
+/* Полноэкранный оверлей */
 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s;
 }
 
 .popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Контент попапа */
 .popup-content {
-    background: #ffffff23;
-    color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 90%;
-    height: 40vw;
-    position: relative;
-    transform: scale(0.9);
-    transition: transform 0.4s ease;
-    font-size: 1.4vw;
-    backdrop-filter: blur(5px);
+  background: var(--light);
+  color: white;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.popup-overlay.active .popup-content {
-    transform: scale(1);
-}
-
+/* Кнопка закрытия */
 .popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    color: #aaa;
-    cursor: pointer;
-    transition: color 0.3s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #aaa;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
 }
 
 .popup-close:hover {
-    color: var(--gold);
+  color: var(--gold);
+}
+
+/* Контейнер с изображением и текстом */
+.popup-container {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* Изображение справа — видимо наполовину */
+.popup-image-wrapper {
+  flex: 0 0 auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popup-image {
+  height: 80%;
+  object-fit: cover;
+  transform: translateX(50%) translateY(10%);
+  z-index: 2;
+}
+
+/* Текстовый контент слева */
+.popup-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Название продукта */
+.popup-text-content h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  text-align: left;
+  margin: 0 0 1rem 9rem;
+  transform: translateY(13vh);
+}
+
+/* Бренд-колесо (Brand Wheel) */
+.brand-wheel {
+  position: relative;
+  width: 100%;
+  height: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  right: 35%;
+  top: 15%;
+  overflow: visible;
+  z-index: 3001;
+}
+
+.wheel-center {
+  position: absolute;
+  width: 35vh;
+  height: 35vh;
+  background: #8b4513;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.wheel-ring {
+  position: absolute;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  z-index: 5;
+}
+
+.wheel-ring span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--light);
+}
+
+.wheel-values {
+  width: 50vh;
+  height: 50vh;
+  background: rgba(139, 69, 19, 0.3);
+}
+
+.wheel-values span{
+    position: relative;
+    top: -20vh;
+}
+
+.wheel-proposition {
+  width: 60vh;
+  height: 60vh;
+  background: rgba(139, 69, 19, 0.2);
+}
+
+.wheel-pillars {
+  width: 70vh;
+  height: 70vh;
+  background: rgba(139, 69, 19, 0.1);
+}
+
+.wheel-pillars span {
+  position: relative;
+    top: -27.5vh;
+}
+
+.wheel-benefits {
+  width: 80vh;
+  height: 80vh;
+  background: rgba(139, 69, 19, 0.05);
+}
+
+.wheel-benefits span {
+  position: relative;
+    top: -32.5vh;
+}
+
+.wheel-essence {
+  width: 90vh;
+  height: 90vh;
+  background: rgba(139, 69, 19, 0.02);
+}
+
+.wheel-essence span {
+    position: relative;
+    top: -37.5vh;
+}
+
+.wheel-personality {
+  width: 100vh;
+  height: 100vh;
+  background: rgba(139, 69, 19, 0.01);
+  border: none;
+}
+
+
+/* Описание снизу */
+.popup-description {
+  background: rgb(0, 0, 0);
+  position: fixed;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-y: auto;
+  overflow-x: visible;
+  height: 30vh;
+  width: 100%;
+  top: 70vh;
+}
+
+/* Описание снизу */
+.popup-description {
+  padding-left: 50%;
+  padding-right: 10%;
+  overflow-y: auto;
+}
+
+#popupTitle {
+    z-index: 9999;
+}
+#abvElm {
+    z-index: 9999;
+}
+#smellElm {
+    z-index: 9999;
+}
+#tasteElm {
+    z-index: 9999;
+}
+#afterTasteElm {
+    z-index: 9999;
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 95%;
+    height: 95vh;
+    padding: 1rem;
+  }
+
+  .popup-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .popup-image-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .popup-image {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-25%);
+  }
+
+  .brand-wheel {
+    height: 200px;
+  }
+
+  .wheel-center {
+    width: 80px;
+    height: 80px;
+    font-size: 0.7rem;
+  }
+
+  .wheel-ring {
+    font-size: 0.6rem;
+  }
+
+  .wheel-values { width: 160px; height: 160px; }
+  .wheel-proposition { width: 180px; height: 180px; }
+  .wheel-pillars { width: 200px; height: 200px; }
+  .wheel-benefits { width: 220px; height: 220px; }
+  .wheel-essence { width: 240px; height: 240px; }
+  .wheel-personality { width: 260px; height: 260px; }
+
+  .popup-description {
+    max-height: 150px;
+  }
 }
 
 #logo-img {
