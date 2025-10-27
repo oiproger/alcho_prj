@@ -782,39 +782,44 @@ video {
     position: relative;
     top: -50vh;
     left: 12vw;
+    width: 90%;
     z-index: 9999;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2vh;
   text-align: left;
+  z-index: 9999;
 }
 
 #smellText{
     position: relative;
-    top: -60vh;
+    top: -61vh;
     left: 12vw;
     z-index: 9999;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2vh;
   text-align: left;
+  overflow: visible;
+  z-index: 9999;
 }
 
 #tasteText{
     position: relative;
-    top: -67vh;
+    top: -72vh;
     left: 12vw;
     z-index: 9999;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2vh;
   text-align: left;
+  z-index: 9999;
 }
 
 #afterTasteText{
     position: relative;
-    top: -74vh;
+    top: -79vh;
     left: 12vw;
     z-index: 9999;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2vh;
   text-align: left;
 }
 
@@ -825,17 +830,18 @@ video {
 
 #smellElm {
     color: var(--dark);
-    padding-left: 19.5vw;
+    padding-left: 18.5vw;
+    overflow: hidden;
 }
 
 #tasteElm {
     color: var(--dark);
-    padding-left: 19vw;
+    padding-left: 16vw;
 } 
 
 #afterTasteElm {
     color: var(--dark);
-    padding-left: 13vw;
+    padding-left: 9vw;
 }
 
 .wheel-proposition {
