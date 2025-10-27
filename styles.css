@@ -235,7 +235,7 @@ h1 {
 }
 
 #popupTitle {
-    color: var(--firmTwo);
+    color: var(--dark);
 }
 
 .section-two strong {
@@ -303,6 +303,7 @@ video {
 .product-img {
     object-fit: contain;
     height: 80%;
+    padding-left: 20%;
     transition: all 0.8s ease-out;
     padding-top: 10%;
 }
@@ -362,26 +363,6 @@ video {
     font-size: 0.6em;
     line-height: 1.6;
     z-index: 0;
-}
-
-/* Кнопка "Подробнее" */
-.btn-details {
-    position: relative;
-    top: 50%;
-    left: 25%;
-    background: transparent;
-    color: var(--black-green);
-    border: 1px solid var(--black-green);
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-    padding: 0.3rem;
-}
-
-.btn-details:hover {
-    color: var(--green);
-    border: 1px solid var(--firmOne);
 }
 
 .product-info h3 {
@@ -585,27 +566,6 @@ video {
     color: black;
 }
 
-.swiper-slide-active .product-img,
-.swiper-slide-active .product-info,
-.swiper-slide-active .product-info-2,
-.swiper-slide-active .product-info-3 {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.swiper-slide-prev .product-img,
-.swiper-slide-next .product-img,
-.swiper-slide-prev .product-info,
-.swiper-slide-next .product-info,
-.swiper-slide-prev .product-info-2,
-.swiper-slide-next .product-info-2,
-.swiper-slide-prev .product-info-3,
-.swiper-slide-next .product-info-3 {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
 .swiper-button-next,
 .swiper-button-prev {
     padding-top: 15rem;
@@ -759,7 +719,7 @@ video {
   color: var(--dark);
   text-align: left;
   margin: 0 0 1rem 9rem;
-  transform: translateY(13vh);
+  transform: translateY(6vh) translateX(3vw);
 }
 
 /* Бренд-колесо (Brand Wheel) */
@@ -787,7 +747,7 @@ video {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-align: center;
   z-index: 10;
 }
@@ -809,7 +769,7 @@ video {
 .wheel-ring span {
   font-weight: bold;
   font-size: 1rem;
-  color: var(--light);
+    color: white;
 }
 
 .wheel-values {
@@ -818,9 +778,64 @@ video {
   background: rgba(139, 69, 19, 0.3);
 }
 
-.wheel-values span{
+#abvText{
     position: relative;
-    top: -20vh;
+    top: -50vh;
+    left: 12vw;
+    z-index: 9999;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#smellText{
+    position: relative;
+    top: -60vh;
+    left: 12vw;
+    z-index: 9999;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#tasteText{
+    position: relative;
+    top: -67vh;
+    left: 12vw;
+    z-index: 9999;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#afterTasteText{
+    position: relative;
+    top: -74vh;
+    left: 12vw;
+    z-index: 9999;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#abvElm {
+    color: var(--dark);
+    padding-left: 23vw;
+} 
+
+#smellElm {
+    color: var(--dark);
+    padding-left: 19.5vw;
+}
+
+#tasteElm {
+    color: var(--dark);
+    padding-left: 19vw;
+} 
+
+#afterTasteElm {
+    color: var(--dark);
+    padding-left: 13vw;
 }
 
 .wheel-proposition {
@@ -860,6 +875,8 @@ video {
 .wheel-essence span {
     position: relative;
     top: -37.5vh;
+    color: white;
+    z-index: 9999;
 }
 
 .wheel-personality {
@@ -874,7 +891,6 @@ video {
 .popup-description {
   background: rgb(0, 0, 0);
   position: fixed;
-  font-size: 0.95rem;
   line-height: 1.6;
   overflow-y: auto;
   overflow-x: visible;
@@ -890,7 +906,11 @@ video {
   overflow-y: auto;
 }
 
-#popupTitle {
+.popup-description strong {
+    color: var(--light);
+}
+
+/* #popupTitle {
     z-index: 9999;
 }
 #abvElm {
@@ -903,15 +923,95 @@ video {
     z-index: 9999;
 }
 #afterTasteElm {
-    z-index: 9999;
+    z-index: 9999; */
+/* } */
+/* Контейнер с горизонтальным скроллом */
+.products-slides {
+  display: flex;
+  gap: 1rem; /* Расстояние между карточками */
+  padding: 1rem 0;
+  width: 100%;
+  height: 40vh;
+  overflow-x: auto; /* Горизонтальный скролл */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green) transparent;
+}
+
+/* Скрытие скроллбара (опционально, для чистоты дизайна) */
+.products-slides::-webkit-scrollbar {
+  height: 6px;
+}
+.products-slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.products-slides::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 3px;
+}
+
+/* Карточка продукта */
+.product-item {
+  position: relative;
+  flex: 0 0 auto; /* Не растягивается, фиксированная ширина */
+  width: 25vh;
+  height: 100%;
+  text-align: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  transition: transform 0.2s;
+}
+
+.product-item:hover {
+  transform: scale(1.03);
+}
+
+/* Изображение продукта */
+.product-img {
+  width: 100%;
+  height: calc(100% - 3rem); /* Оставляем место для кнопки */
+  padding-right: 20%;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+  transition: opacity 0.3s;
+}
+
+/* Кнопка "Подробнее" — поверх изображения */
+.btn-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+/* Показываем кнопку при наведении */
+.product-item:hover .btn-details {
+  opacity: 1;
+}
+
+/* При наведении на кнопку — можно дополнительно затемнить изображение */
+.product-item:hover .product-img {
+  opacity: 0.85;
 }
 
 /* Адаптация под мобильные */
 @media (max-width: 768px) {
   .popup-content {
-    width: 95%;
-    height: 95vh;
-    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .popup-container {
@@ -920,24 +1020,33 @@ video {
   }
 
   .popup-image-wrapper {
-    width: 100%;
-    height: 200px;
-  }
+        flex: 0 0 auto;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
 
-  .popup-image {
-    width: 100%;
-    height: 100%;
-    transform: translateY(-25%);
-  }
+    .popup-image {
+        height: 80%;
+        width: 70vw;
+        object-fit: contain;
+        margin-left: 32vw;
+        z-index: 2;
+    }
 
   .brand-wheel {
-    height: 200px;
+    position: relative;
+    display: flex;
+    height: 20vh;
+    padding-top: 60vh;
+    z-index: 0;
   }
 
   .wheel-center {
     width: 80px;
     height: 80px;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    padding-bottom: 1vh;
   }
 
   .wheel-ring {
@@ -952,8 +1061,106 @@ video {
   .wheel-personality { width: 260px; height: 260px; }
 
   .popup-description {
-    max-height: 150px;
+    height: 25vh;
+    margin-top: 5vh;
+    padding-left: 2%;
+    padding-right: 27%;
+    font-size: 0.8rem;
   }
+
+  .popup-text-content {
+    min-height: 100vh;
+    position: absolute;
+    background: var(--light);
+    overflow: hidden;
+  }
+
+  .btn-details {
+    opacity: 1;
+  }
+
+#popupTitle {
+    margin-left: 5vw;
+    color: var(--dark);
+}
+
+#abvText{
+    position: relative;
+    top: -30vh;
+    left: 4vw;
+    margin-right: 0%;
+    z-index: 9999;
+    width: 70%;
+    top: -23vh;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  text-align: left;
+  color: var(--dark);
+}
+
+#smellText{
+    position: relative;
+    top: -45vh;
+    left: 4vw;
+    z-index: 9999;
+    width: 70%;
+    top: -58vh;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  text-align: left;
+  color: var(--dark);
+}
+
+#tasteText{
+    position: relative;
+    top: -60vh;
+    left: 4vw;
+    z-index: 9999;
+    width: 70%;
+    top: -56vh;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  text-align: left;
+  color: var(--dark);
+}
+
+#afterTasteText{
+    position: relative;
+    left: 4vw;
+    z-index: 9999;
+    width: 70%;
+    top: -55vh;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  text-align: left;
+  color: var(--dark);
+}
+
+
+#abvElm {
+    color: var(--dark);
+    padding-left: 0vw;
+} 
+
+#smellElm {
+    color: var(--dark);
+    padding-left: 0vw;
+}
+
+#tasteElm {
+    color: var(--dark);
+    padding-left: 0vw;
+} 
+
+#afterTasteElm {
+    color: var(--dark);
+    padding-left: 0vw;
+}
+
 }
 
 #logo-img {
@@ -1106,53 +1313,6 @@ video {
 
     .stats-grid {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .product-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 35%;
-        height: 100%;
-        /* background: #0d1b1eab; */
-        padding: 1rem;
-        border-radius: 10px 10px 10px 10px;
-        opacity: 0;
-        transform: translateY(-50px);
-        transition: all 0.7s ease-out 0.1s;
-        color: var(--dark);
-        font-size: 2.87vw;
-        line-height: 1.4;
-        text-align: left;
-    }
-
-    .product-info-2 {
-        position: absolute;
-        bottom: 0;
-        left: 65%;
-        width: 35%;
-        height: 100%;
-        /* background: #0d1b1eab; */
-        padding: 1rem;
-        border-radius: 10px 10px 10px 10px;
-        opacity: 0;
-        transform: translateY(-50px);
-        transition: all 0.7s ease-out 0.1s;
-        /* Задержка 0.1с */
-        color: var(--dark);
-        font-size: 2.87vw;
-        line-height: 1.4;
-        text-align: right;
-    }
-
-    .product-img {
-        margin-top: 5vh;
-        width: 30%;
-        height: 45%;
-        object-fit: contain;
-        opacity: 1;
-        transform: translateY(0%);
-        transition: all 0.8s ease-out;
     }
 
     .ticker-track {

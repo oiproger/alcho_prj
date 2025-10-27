@@ -192,7 +192,20 @@ function applyFilter(category) {
   // swiperInstance.slideTo(0); // Сбрасываем на первый видимый
 
   if (category !== "all") {
-    swiperInstance.slideTo(productIndexes[category]);
+    filterItems(category);
+  }
+}
+
+function filterItems(xFilter) {
+  const allElms = document.getElementsByClassName("product-item");
+
+  for (const obj in allElms) {
+    const hObj = allElms[obj];
+
+    if (typeof(hObj) === "object") {
+      const hData = hObj.dataset.filter;
+      hObj.style.display = (hData === xFilter) ? "block" : "none"; 
+    }
   }
 }
 
@@ -446,7 +459,7 @@ const productSlangs = {
 
 const productInfo = {
   'louis-vernant-xo': {
-    name: "",
+    name: "Louis Vernant XO",
     abv: 40,
     taste: "Сушеные фрукты, Ваниль, Специи, очень мягкий, насыщеный",
     smell: "Фруктовый, Медовый, Хересный, Пряный",
@@ -455,7 +468,7 @@ const productInfo = {
     img: "images/louis-vernant.png",
   },
   'diplomat-whisky': {
-    name: "",
+    name: "Diplomat Whisky",
     abv: 40,
     taste: "Смесь сладких нот, остроты и тонкая горечь, которая уравновешивает сладость.",
     smell: "Солод, древесные оттенки, оттенки сладкого меда, фруктовых нот и оттенка орехового вкуса.",
@@ -464,7 +477,7 @@ const productInfo = {
     img: "images/diplomat.png",
   },
   'green-label': {
-    name: "",
+    name: "Green Label",
     abv: 40,
     taste: "Насыщенный, солодовый, зернистый, слегка древесный",
     smell: "Фруктовый, зрелый, солодовый, зернистый",
@@ -473,16 +486,16 @@ const productInfo = {
     img: "images/green-label.png",
   },
   'old-tavern-whisky': {
-    name: "",
+    name: "Old Tavern Whisky",
     abv: 40,
     taste: "Сочетание сладкого, землистого и острого с нежной горечью",
     smell: "Солод, дуб, с цветочными и пряными оттенками",
     afterTaste: "Короткое, плавное, округлое",
-    color: "e8bd57",
+    color: "b47f04",
     img: "images/old-tavern.png",
   },
   'honey-bee-brandy': {
-    name: "",
+    name: "Honey Bee Brandy",
     abv: 40,
     taste: "Насыщенный, но мягкий. Первый глоток раскрывает нежную медовую сладость",
     smell: "Наполнен теплом и сладостью, в нём слышны ноты спелых тропических фруктов и пряностей",
@@ -491,16 +504,16 @@ const productInfo = {
     img: "images/honey-bee.png",
   },
   'haywards-whisky': {
-    name: "",
+    name: "Haywards Whisky",
     abv: 42.8,
     smell: "Легкий и свежий, с доминирующими фруктовыми нотами, такими как яблоки и груши, а также с легкими оттенками ванили и древесины",
-    taste: "Мягкий и сбалансированный, с гармоничным сочетанием сладких фруктовых нот (яблоки, груши) и легкой пряности. Древесные акценты придают напитку особую сбалансированность",
+    taste: "Мягкий и сбалансированный, с гармоничным сочетанием сладких фруктовых нот (яблоки, груши) и легкой пряности.",
     afterTaste: "Долгое, гладкое, согревающее с нежной дымностью и прикосновение горечи",
-    color: "dab254",
+    color: "b88715",
     img: "images/haywards.png",
   },
   'blue-riband-gin': {
-    name: "",
+    name: "Blue Riband Gin",
     abv: 42.8,
     taste: "Сочетание цитруса, кориандра и можжевельника",
     smell: "Можжевельник, цитрус, пряный кориандр",
@@ -509,7 +522,7 @@ const productInfo = {
     img: "images/blue-riband.png",
   },
   'white-mischief-vodka': {
-    name: "",
+    name: "White Mischief Vodka",
     abv: 42.8,
     taste: "Тонкий, мягкий вкус с оттенками пряных ноток",
     smell: "Нейтральный деликатный",
@@ -518,7 +531,7 @@ const productInfo = {
     img: "images/white-mischief.png",
   },
   'black-stallion-rum': {
-    name: "",
+    name: "Black Stallion Rum",
     abv: 42.8,
     taste: "Сложный, сбалансированный, с нотами кофе, ванили, карамели, сухофруктов, дерева, специй, с приятной горчинкой",
     smell: "Насыщенный, с тонами кофе, сухофруктов, ванили, карамели",
@@ -527,28 +540,27 @@ const productInfo = {
     img: "images/black-stallion.png",
   },
   'old-cask': {
-    name: "",
+    name: "Old Cask",
     abv: 40,
     taste: "Гладкий и фруктовый с оттенком карамели сливок, восточных пряностей, цитрусовых",
     smell: "Богатый, сладкий, напоминающий запах конфет, в букете сочетаются оттенки сухофруктов, кофе, душистой выпечки и шоколада",
     afterTaste: "Затяжная сладость",
-    color: "e8c36a",
+    color: "c99a2e",
     img: "images/old-cask.png",
   },
 };
 
+// #b47f04ff
 // Открытие попапа
 document.querySelectorAll('.btn-details').forEach(btn => {
   btn.addEventListener('click', function (e) {
     e.stopPropagation();
-    const parentSlide = this.closest('.product-slide');
+    const parentSlide = this.closest('.product-item');
     const imgSrc = parentSlide.querySelector('img').src;
     const productName = parentSlide.querySelector('img').alt;
 
     // Определяем ключ по названию
     const key = productName.toLowerCase().replace(/\s+/g, '-');
-
-    popupTitle.textContent = productName;
     popupDescription.innerHTML = productDetails[key] || 'Описание недоступно.';
 
     const hItmInf = productSlangs[key];
@@ -567,7 +579,7 @@ document.querySelectorAll('.btn-details').forEach(btn => {
     ];
 
     itmParams_elms[0].innerText = hItmParams.name;
-    itmParams_elms[1].innerText = hItmParams.abv;
+    itmParams_elms[1].innerText = `${hItmParams.abv}%`;
     itmParams_elms[2].innerText = hItmParams.smell;
     itmParams_elms[3].innerText = hItmParams.taste;
     itmParams_elms[4].innerText = hItmParams.afterTaste;
@@ -585,12 +597,12 @@ document.querySelectorAll('.btn-details').forEach(btn => {
     ];
 
     itmColors_elms[0].style.backgroundColor = `#${hItmParams.color}`;
-    itmColors_elms[1].style.backgroundColor = `#${hItmParams.color}ea`;
-    itmColors_elms[2].style.backgroundColor = `#${hItmParams.color}da`;
-    itmColors_elms[3].style.backgroundColor = `#${hItmParams.color}cf`;
-    itmColors_elms[4].style.backgroundColor = `#${hItmParams.color}c4`;
-    itmColors_elms[5].style.backgroundColor = `#${hItmParams.color}af`;
-    itmColors_elms[6].style.backgroundColor = `#${hItmParams.color}a5`;
+    itmColors_elms[1].style.backgroundColor = `#${hItmParams.color}4d`;
+    itmColors_elms[2].style.backgroundColor = `#${hItmParams.color}4d`;
+    itmColors_elms[3].style.backgroundColor = `#${hItmParams.color}4d`;
+    itmColors_elms[4].style.backgroundColor = `#${hItmParams.color}4d`;
+    itmColors_elms[5].style.backgroundColor = `#${hItmParams.color}4d`;
+    itmColors_elms[6].style.backgroundColor = `#${hItmParams.color}4d`;
     itmColors_elms[7].style.backgroundColor = `#${hItmParams.color}`;
 
     popup.classList.add('active');
