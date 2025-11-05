@@ -464,7 +464,7 @@ const productInfo = {
     taste: "Сушеные фрукты, Ваниль, Специи, очень мягкий, насыщеный",
     smell: "Фруктовый, Медовый, Хересный, Пряный",
     afterTaste: "Долгое со стойкой сладостью",
-    color: "8a6222",
+    color: "590d17",
     img: "images/louis-vernant.png",
   },
   'diplomat-whisky': {
@@ -473,7 +473,7 @@ const productInfo = {
     taste: "Смесь сладких нот, остроты и тонкая горечь, которая уравновешивает сладость.",
     smell: "Солод, древесные оттенки, оттенки сладкого меда, фруктов и орехового вкуса.",
     afterTaste: "Гладкое, теплое, с мягким переходом",
-    color: "c88d31",
+    color: "c79439",
     img: "images/diplomat.png",
   },
   'green-label': {
@@ -491,7 +491,7 @@ const productInfo = {
     taste: "Сочетание сладкого, землистого и острого с нежной горечью",
     smell: "Солод, дуб, с цветочными и пряными оттенками",
     afterTaste: "Короткое, плавное, округлое",
-    color: "b47f04",
+    color: "bc902f",
     img: "images/old-tavern.png",
   },
   'honey-bee-brandy': {
@@ -500,7 +500,7 @@ const productInfo = {
     taste: "Насыщенный, но мягкий. Первый глоток раскрывает нежную медовую сладость",
     smell: "Ноты спелых тропических фруктов и пряностей",
     afterTaste: "Лёгкие древесные нотки и оттенки ванили",
-    color: "9b3746",
+    color: "69222e",
     img: "images/honey-bee.png",
   },
   'haywards-whisky': {
@@ -509,7 +509,7 @@ const productInfo = {
     smell: "Фруктовые нотаы яблок и груши, а также легкие оттенки ванили и древесины",
     taste: "Сладкие фруктовые ноты (яблоки, груши) и легкая пряность.",
     afterTaste: "Долгое, гладкое, согревающее с нежной дымностью и прикосновение горечи",
-    color: "b88715",
+    color: "c73941",
     img: "images/haywards.png",
   },
   'blue-riband-gin': {
@@ -518,7 +518,7 @@ const productInfo = {
     taste: "Сочетание цитруса, кориандра и можжевельника",
     smell: "Можжевельник, цитрус, пряный кориандр",
     afterTaste: "Сухое, средней плотности",
-    color: "32315C",
+    color: "535597",
     img: "images/blue-riband.png",
   },
   'white-mischief-vodka': {
@@ -527,7 +527,7 @@ const productInfo = {
     taste: "Тонкий, мягкий вкус с оттенками пряных ноток",
     smell: "Нейтральный деликатный",
     afterTaste: "Краткое послевкусие с чистым вкусом",
-    color: "3a5cca",
+    color: "2a4ec1",
     img: "images/white-mischief.png",
   },
   'black-stallion-rum': {
@@ -545,7 +545,7 @@ const productInfo = {
     taste: "Гладкий и фруктовый с оттенком карамели сливок, восточных пряностей, цитрусовых",
     smell: "Оттенки сухофруктов, кофе, душистой выпечки и шоколада",
     afterTaste: "Затяжная сладость",
-    color: "c99a2e",
+    color: "ce9953",
     img: "images/old-cask.png",
   },
 };
