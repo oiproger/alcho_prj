@@ -23,10 +23,10 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-btnForm.addEventListener("click", () => {
-  mailForm.setAttribute("action", `mailto:test@test.com?subject=${mailTheme.value}&body=${mailContent.value}`);
-  mailForm.submit();
-});
+// btnForm.addEventListener("click", () => {
+//   mailForm.setAttribute("action", `mailto:commercial@transbrew.ru`);
+//   mailForm.submit();
+// });
 
 // Получаем все прогресс-бары
 const progressBars = {
@@ -245,8 +245,8 @@ const productDetails = {
     представляет
     собой
     гармоничную смесь отборных вручную французских
-    коньячныхспиртов.
-    Опыт наших мастеров-блендеровгарантирует,
+    коньячных спиртов.
+    Опыт наших мастеров-блендеров гарантирует,
     что
     каждая
     бутылка
@@ -272,9 +272,9 @@ const productDetails = {
     обещание изысканного вкуса, независимо от того,
     подан ли он в чистом виде в низком бокале или
     охлажденным до совершенства со льдом.
-    <strong>DIPLOMAT World Class Whisky</strong> – это не просто виски.
-    - Это
-    приглашение в мир изысканного вкуса
+    <strong>DIPLOMAT World Class Whisky</strong> – это не просто виски
+    - это
+    приглашение в мир изысканного вкуса.
   `,
   'green-label': `
     Наша легендарная бутылка Waali с бриллиантовой огранкой обладает богатым наследием,
@@ -305,7 +305,7 @@ const productDetails = {
     ценителей незабываемых моментов.`,
   'honey-bee-brandy': `
     С момента своего дебюта в 1974 году <strong>Honey Bee
-        Brandy</strong>стал отличительной чертой Индийского
+        Brandy</strong> стал отличительной чертой Индийского
     изобилия.
     Изготовленный
     из
@@ -333,7 +333,7 @@ const productDetails = {
     небольшим
     количеством
     апельсиновой
-    газировки. он придаст элегантности любому
+    газировки. Он придаст элегантности любому
     торжеству. Бренди Honey Bee, является
     символом
     неподвластной
@@ -343,7 +343,7 @@ const productDetails = {
     остается
     предпочтительным
     выбором тех, кто ценит в
-    жизни только лучшее
+    жизни только лучшее.
   `,
   'haywards-whisky': `
     Haywards Fine Whisky — история с 1886 года. 
@@ -351,7 +351,7 @@ const productDetails = {
     Вкус индийского наследия, доступный каждому.
   `,
   'blue-riband-gin': `
-    С 1959 года <strong>BLUE RIBAND GIN</strong> является главным-
+    С 1959 года <strong>BLUE RIBAND GIN</strong> является главным 
     выбором
     избирательных
     ценителей
@@ -377,7 +377,7 @@ const productDetails = {
   'white-mischief-vodka': `
     Рожденная в 1996 году <strong>White Mischief Vodka</strong>
     изменила монотонные и однообразные
-    принципы в мире спиртов. Созданная стать-
+    принципы в мире спиртов. Созданная стать 
     чем-то большим, чем просто напиток, она
     воплощает молодость, веселье и немного
     озорства. Его матовый флакон, украшает
@@ -506,7 +506,7 @@ const productInfo = {
   'haywards-whisky': {
     name: "Haywards Whisky",
     abv: 42.8,
-    smell: "Фруктовые нотаы яблок и груши, а также легкие оттенки ванили и древесины",
+    smell: "Фруктовые ноты яблок и груши, а также легкие оттенки ванили и древесины",
     taste: "Сладкие фруктовые ноты (яблоки, груши) и легкая пряность.",
     afterTaste: "Долгое, гладкое, согревающее с нежной дымностью и прикосновение горечи",
     color: "c73941",

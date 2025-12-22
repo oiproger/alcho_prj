@@ -16,18 +16,35 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
 
-    <!-- Яндекс.Метрика
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(XXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
-  </script> -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YG02V9V5C"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1YG02V9V5C');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105302445', 'ym');
+
+        ym(105302445, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105302445" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
 </head>
 
 <body>
 
-    <div class="age-content" id="age-content" style="align-items: center; text-align: center; display: none;">
+    <div class="age-content" id="age-content" style="align-items: center; text-align: center; display: block;">
         <h2 class="age-h">
             Внимание! Данный сервис содержит информацию и изображения алкогольной продукции. Для просмотра подтвердите, что Вам исполнилось 18 лет.
         </h2>
@@ -155,7 +172,7 @@
             индийского производства и европейские стандарты качества.
         </h3>
         <h3 style="text-align: center;">
-            <strong>InBrew beverages</strong> является ведущим игроком на рынке Индии. Производит и реализует
+            <strong>InBrew Beverages</strong> является ведущим игроком на рынке Индии. Производит и реализует
             широкий ассортимент крепких спиртных напитков и пива. История которых – многолетнее
             наследие. В ассортименте представлены одни из самых популярных брендов, которые на
             протяжении десятилетий формируют вкус нации. И стремятся дальше создавать
@@ -172,7 +189,7 @@
     <section id="guarantee" class="section section-one">
         <h2>Производство</h2>
             <img src="images/green_ico.png">
-        <h3 style="text-align: center;">Основанная в 1983 году, находится на пути к тому, чтобы стать одной из ведущих
+        <h3 style="text-align: center;">Компания Khemani Distilleries Pvt Limited, основанная в 1983 году, находится на пути к тому, чтобы стать одной из ведущих
             дистиллерийи пивоварен в Индии и узнаваемым брендом на рынке алкогольных напитков.</h3>
         <img id="countries-img" src="images/countries.png">
         <h3 style="text-align: center;">
@@ -295,26 +312,20 @@
             <p class="contacts-txt"><strong>Компания:</strong> АО «ТРАНСБРЮ ИНТЕРНЕЙШНЛ»</p>
             <p class="contacts-txt"><strong>Адрес:</strong> 117485, г. Москва, м.о. Коньково, ул. Обручева, д. 30/1,
                 стр. 2</p>
-            <p class="contacts-txt"><strong>Телефон:</strong> +7 (495) 775-39-38</p>
-            <p class="contacts-txt"><strong>Email:</strong> <a href="mailto:info@transbrew.ru">info@transbrew.ru</a></p>
-            <p class="contacts-txt"><strong>Контактное лицо:</strong> Людмила Нестерова — +7 963 531 3130</p>
+            <p class="contacts-txt"><strong>Email:</strong> <a href="mailto:office@transbrew.ru">office@transbrew.ru</a></p>
             <p class="contacts-txt"><strong>График работы:</strong> Пн–Пт: 9:00–18:00 | Сб–Вс: выходной</p>
         </div>
         <div class="map-container">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef" width="100%" height="300"
-                frameborder="0"></iframe>
+            <iframe 
+                src="https://yandex.ru/map-widget/v1/?text=117485, г. Москва, м.о. Коньково, ул. Обручева, д. 30/1, стр. 2"
+                width="100%"
+                height="300"
+                frameborder="0">
+            </iframe>
         </div>
-        <form class="contact-form" id="mailForm">
-            <input type="text" placeholder="Имя" required>
-            <input type="email" placeholder="Email" required>
-            <select id="mailTheme">
-                <option>Дистрибуция</option>
-                <option>Оптовые заказы</option>
-                <option>Маркетинг</option>
-            </select>
-            <textarea placeholder="Сообщение" id="mailContent"></textarea>
-            <button type="submit" class="btn" id="btnForm">Отправить</button>
-        </form>
+        <!-- <form class="contact-form" id="mailForm"> -->
+        <button type="submit" class="btn" id="btnForm"><a href="mailto:office@transbrew.ru">Связаться с нами</a></button>
+        <!-- </form> -->
 
     </section>
 
